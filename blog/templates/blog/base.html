@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Blog</title>
+    <title>{% block title %}{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -12,8 +12,11 @@
 <body>
 <div class="page-header">
     {% if user.is_authenticated %}
-    <a href="{% url 'post_draft_list' %}" class="top-menu"><i class="fab fa-firstdraft fa-2x" style=" color: #ffffff; float: right; font-size: 26pt; margin-right: 20px;"></i></a>
-    <a href="{% url 'post_new' %}" class="top-menu"><i class="fas fa-plus fa-2x" style=" color: #ffffff; float: right; font-size: 26pt; margin-right: 20px;"></i></a>
+        <a href="{% url 'post_draft_list' %}" class="top-menu"><i class="fab fa-firstdraft fa-2x" style=" color: #ffffff; float: right; font-size: 26pt; margin-right: 20px;"></i></a>
+        <a href="{% url 'post_new' %}" class="top-menu"><i class="fas fa-plus fa-2x" style=" color: #ffffff; float: right; font-size: 26pt; margin-right: 20px;"></i></a>
+
+    {% else %}
+        <a href="{% url 'login' %}" class="top-menu"><i class="fas fa-sign-in-alt" style="color: #ffffff; float: right; font-size: 26pt; margin-right: 20px;"></i></a>
     {% endif %}
     <h1><a href="{% url "post_list" %}">LEO BLOG</a></h1>
 </div>
