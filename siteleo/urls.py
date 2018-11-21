@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
 
-    # 127.0.0.1:8000/accounts/login --> local
-    # mydjangosite.com/accounts/login --> online
-    path('accounts/login/', include('django.contrib.auth.urls'), name='login'),
+    # 127.0.0.1:8000/accounts/ --> local
+    # mydjangosite.com/accounts/ --> online
+    path('accounts/', include('django.contrib.auth.urls'), name='login'),
 ]
