@@ -23,5 +23,5 @@ urlpatterns = [
 
     # 127.0.0.1:8000/accounts/login --> local
     # mydjangosite.com/accounts/login --> online
-    path('accounts/login/', include('django.contrib.auth.urls'), name='login'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
