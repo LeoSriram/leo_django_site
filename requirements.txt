@@ -3,7 +3,21 @@ dj-database-url==0.5.0
 Django==2.1.4
 django-heroku==0.3.1
 gunicorn==19.9.0
+<<<<<<< HEAD
 psycopg2==2.7.6.1
 pytz==2018.7
 whitenoise==4.1.2
 wincertstore==0.2
+=======
+heroku==0.1.4
+idna==2.7
+Markdown==2.6.11
+mistune==0.8.3
+psycopg2==2.7.5
+Pygments==2.2.0
+python-dateutil==1.5
+pytz==2018.5
+requests>=2.20.0
+urllib3==1.23
+whitenoise==4.0
+>>>>>>> 6cebc90ad00c68159c869586b83681cc1c8e1a20
